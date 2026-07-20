@@ -1,0 +1,23 @@
+{
+  "name": "cca-f-scenario-1-customer-support-agent",
+  "version": "1.0.0",
+  "description": "CCA-F Scenario 1 reference implementation: a customer support resolution agent over a custom MCP server.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "server": "tsx src/mcp-server.ts",
+    "agent": "tsx src/agent.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.0"
+  }
+}
