@@ -1,0 +1,12 @@
+INVOICE #4471
+
+Global Freight Partners Ltd.
+Invoice Date: 2026-05-02
+
+Line items:
+- Ocean freight, container CNTR-88213     45,000
+- Customs handling fee                     1,200 EUR
+- Fuel surcharge                             380
+
+Note: line items quoted in mixed currencies pending final FX settlement.
+Total due: see final settlement invoice.

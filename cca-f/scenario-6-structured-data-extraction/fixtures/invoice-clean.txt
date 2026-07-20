@@ -1,0 +1,15 @@
+INVOICE
+
+Northwind Office Supplies Inc.
+Invoice Date: 2026-03-14
+
+Bill to: Acme Corp, Accounts Payable
+
+Items:
+- Standing desk (adjustable)        $410.00
+- Wireless keyboard                  $65.00
+- Monitor arm, dual                  $89.00
+
+Total Due: $564.00 USD
+
+Payment terms: Net 30.
