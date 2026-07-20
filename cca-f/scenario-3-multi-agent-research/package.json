@@ -1,0 +1,23 @@
+{
+  "name": "cca-f-scenario-3-multi-agent-research",
+  "version": "1.0.0",
+  "description": "CCA-F Scenario 3 reference implementation: a coordinator that delegates to research subagents over a shared MCP document corpus.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "server": "tsx src/mcp-server.ts",
+    "research": "tsx src/coordinator.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.0"
+  }
+}
