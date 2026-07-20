@@ -1,0 +1,59 @@
+# Runs on every PR: Claude Code reviews the diff in headless mode, writes
+# structured findings to review-findings.json, and post-review-comments.ts
+# filters + posts them. The filtering step is what actually keeps false
+# positives off the PR — see the README and src/filter-findings.ts.
+#
+# CLI flags below are current as of this writing — check
+# https://docs.claude.com/claude-code for the current headless-mode /
+# structured-output flags before relying on this in production, the same
+# way you'd check the current model name rather than trust a hardcoded one.
+name: Claude Code review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Get the PR diff
+        run: git diff origin/${{ github.base_ref }}...HEAD > pr.diff
+
+      - name: Run Claude Code review (headless)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          claude -p "$(cat cca-f/scenario-5-claude-code-ci/prompts/review-prompt.md)
+
+          Review this diff:
+          $(cat pr.diff)" \
+          --allowedTools "Write" \
+          --permission-mode acceptEdits
+
+      - name: Install workflow dependencies
+        working-directory: cca-f/scenario-5-claude-code-ci
+        run: npm ci
+
+      - name: Filter and post findings
+        working-directory: cca-f/scenario-5-claude-code-ci
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: npm run post -- ../../review-findings.json
