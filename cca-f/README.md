@@ -4,14 +4,16 @@ The CCA-F exam is the only one of the four Anthropic certifications built on ful
 
 Each folder below is a working reference implementation of one scenario, built to the same shape the exam guide describes. The companion deep-dive article for each is linked once published on [aicert.study/blog](https://aicert.study/en/blog).
 
+All 6 are done — this is the complete set the real exam draws 4 from.
+
 | # | Scenario | Domains tested | Status |
 |---|---|---|---|
 | 1 | [Customer Support Resolution Agent](./scenario-1-customer-support-agent) | Agentic Architecture & Orchestration · Tool Design & MCP Integration · Context Management & Reliability | ✅ Available |
-| 2 | Code Generation with Claude Code | Claude Code Configuration & Workflows · Context Management & Reliability | Planned |
-| 3 | Multi-Agent Research System | Agentic Architecture & Orchestration · Tool Design & MCP Integration · Context Management & Reliability | Planned |
-| 4 | Developer Productivity with Claude | Tool Design & MCP Integration · Claude Code Configuration & Workflows · Agentic Architecture & Orchestration | Planned |
-| 5 | Claude Code for Continuous Integration | Claude Code Configuration & Workflows · Prompt Engineering & Structured Output | Planned |
-| 6 | Structured Data Extraction | Prompt Engineering & Structured Output · Context Management & Reliability | Planned |
+| 2 | [Code Generation with Claude Code](./scenario-2-claude-code-workflows) | Claude Code Configuration & Workflows · Context Management & Reliability | ✅ Available |
+| 3 | [Multi-Agent Research System](./scenario-3-multi-agent-research) | Agentic Architecture & Orchestration · Tool Design & MCP Integration · Context Management & Reliability | ✅ Available |
+| 4 | [Developer Productivity with Claude](./scenario-4-developer-productivity) | Tool Design & MCP Integration · Claude Code Configuration & Workflows · Agentic Architecture & Orchestration | ✅ Available |
+| 5 | [Claude Code for Continuous Integration](./scenario-5-claude-code-ci) | Claude Code Configuration & Workflows · Prompt Engineering & Structured Output | ✅ Available |
+| 6 | [Structured Data Extraction](./scenario-6-structured-data-extraction) | Prompt Engineering & Structured Output · Context Management & Reliability | ✅ Available |
 
 ## CCA-F's 5 domains, for reference
 

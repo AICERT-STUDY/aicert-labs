@@ -8,7 +8,7 @@ Every folder here is referenced from a specific blog article and, where the arti
 
 | Folder | Certification | Status |
 |---|---|---|
-| [`cca-f/`](./cca-f) | [Claude Certified Architect – Foundations](https://aicert.study/en/certifications/ccaf) | In progress — scenario walkthroughs |
+| [`cca-f/`](./cca-f) | [Claude Certified Architect – Foundations](https://aicert.study/en/certifications/ccaf) | ✅ Done — all 6 official scenarios |
 | [`ccdv-f/`](./ccdv-f) | [Claude Certified Developer – Foundations](https://aicert.study/en/certifications/ccdv-f) | Planned (wave 2) |
 | [`ccao-f/`](./ccao-f) | [Claude Certified Associate – Foundations](https://aicert.study/en/certifications/ccao-f) | Planned (wave 3) |
 | [`ccar-p/`](./ccar-p) | [Claude Certified Architect – Professional](https://aicert.study/en/certifications/ccar-p) | Planned (wave 4) |
